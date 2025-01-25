@@ -40,7 +40,8 @@ An optional section for the role authors to include contact information, or a we
 
 
 
-Note
-# By deafult Apache Httpd Webserver will show you its default web page so make sure to use these commnads 
+*Note*
+By deafult Apache Httpd Webserver will show you its default web page so make sure to use these commnads 
 mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf_backup
+
 systemctl restart httpd

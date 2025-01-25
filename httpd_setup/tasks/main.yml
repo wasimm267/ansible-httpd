@@ -1,0 +1,20 @@
+---
+# tasks file for httpd_setup
+- name: Install HTTPD
+  yum:
+    name: "{{ httpd_package_name }}"
+    state: present
+  become: true
+- name: Place custom html page
+  copy:
+    src: index.html
+    dest: /var/www/html/index.hmtl  
+  become: true
+
+- name: start the service 
+  service: 
+    name: "{{ httpd_package_name }}"
+    state: started
+    enabled: yes
+  become: true
+

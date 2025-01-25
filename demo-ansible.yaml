@@ -1,0 +1,6 @@
+---
+- name: Install & Start service in firewall
+  hosts: all
+  roles: 
+    - httpd_setup
+    - fwd_srv

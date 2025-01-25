@@ -1,0 +1,9 @@
+---
+- name: enable a service in firewall
+  firewalld:
+    service: http
+    state: enabled
+    permanent: true
+  become: true
+  notify: Reload the firewalld
+
